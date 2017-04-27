@@ -13,6 +13,9 @@
 		966845061E59D3EA005A6F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966845051E59D3EA005A6F2C /* Assets.xcassets */; };
 		966845091E59D3EA005A6F2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */; };
 		966845141E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */; };
+		B61066681EB23D3D007E720D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61066671EB23D3D007E720D /* SecondViewController.swift */; };
+		B610666A1EB23D44007E720D /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61066691EB23D44007E720D /* SecondViewController.storyboard */; };
+		B610666F1EB24850007E720D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B610666E1EB24850007E720D /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		9668450F1E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-uikit-uiactivityindicatorview-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_uikit_uiactivityindicatorview_demoTests.swift; sourceTree = "<group>"; };
 		966845151E59D3EA005A6F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B61066671EB23D3D007E720D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B61066691EB23D44007E720D /* SecondViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
+		B610666E1EB24850007E720D /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,9 @@
 		966844F21E59D3E9005A6F2C = {
 			isa = PBXGroup;
 			children = (
+				966844FC1E59D3EA005A6F2C /* Products */,
 				966844FD1E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demo */,
 				966845121E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demoTests */,
-				966844FC1E59D3EA005A6F2C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +83,9 @@
 		966844FD1E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demo */ = {
 			isa = PBXGroup;
 			children = (
-				966844FE1E59D3EA005A6F2C /* AppDelegate.swift */,
-				966845001E59D3EA005A6F2C /* ViewController.swift */,
-				966845021E59D3EA005A6F2C /* Main.storyboard */,
-				966845051E59D3EA005A6F2C /* Assets.xcassets */,
-				966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */,
-				9668450A1E59D3EA005A6F2C /* Info.plist */,
+				B61066641EB23D00007E720D /* Controllers */,
+				B610666D1EB23D84007E720D /* Extensions */,
+				B610666C1EB23D76007E720D /* Others */,
 			);
 			path = "ios-uikit-uiactivityindicatorview-demo";
 			sourceTree = "<group>";
@@ -90,10 +93,64 @@
 		966845121E59D3EA005A6F2C /* ios-uikit-uiactivityindicatorview-demoTests */ = {
 			isa = PBXGroup;
 			children = (
-				966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */,
 				966845151E59D3EA005A6F2C /* Info.plist */,
+				966845131E59D3EA005A6F2C /* ios_uikit_uiactivityindicatorview_demoTests.swift */,
 			);
 			path = "ios-uikit-uiactivityindicatorview-demoTests";
+			sourceTree = "<group>";
+		};
+		B61066641EB23D00007E720D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B61066651EB23D15007E720D /* Main */,
+				B61066661EB23D1C007E720D /* SecondViewController */,
+				B610666B1EB23D68007E720D /* Startup */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B61066651EB23D15007E720D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				966845021E59D3EA005A6F2C /* Main.storyboard */,
+				966845001E59D3EA005A6F2C /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B61066661EB23D1C007E720D /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B61066691EB23D44007E720D /* SecondViewController.storyboard */,
+				B61066671EB23D3D007E720D /* SecondViewController.swift */,
+			);
+			path = SecondViewController;
+			sourceTree = "<group>";
+		};
+		B610666B1EB23D68007E720D /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		B610666C1EB23D76007E720D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				966844FE1E59D3EA005A6F2C /* AppDelegate.swift */,
+				966845051E59D3EA005A6F2C /* Assets.xcassets */,
+				9668450A1E59D3EA005A6F2C /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		B610666D1EB23D84007E720D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B610666E1EB24850007E720D /* UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966845091E59D3EA005A6F2C /* LaunchScreen.storyboard in Resources */,
+				B610666A1EB23D44007E720D /* SecondViewController.storyboard in Resources */,
 				966845061E59D3EA005A6F2C /* Assets.xcassets in Resources */,
 				966845041E59D3EA005A6F2C /* Main.storyboard in Resources */,
 			);
@@ -201,7 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61066681EB23D3D007E720D /* SecondViewController.swift in Sources */,
 				966845011E59D3EA005A6F2C /* ViewController.swift in Sources */,
+				B610666F1EB24850007E720D /* UIViewController.swift in Sources */,
 				966844FF1E59D3EA005A6F2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +291,7 @@
 				966845031E59D3EA005A6F2C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		966845071E59D3EA005A6F2C /* LaunchScreen.storyboard */ = {
@@ -239,6 +300,7 @@
 				966845081E59D3EA005A6F2C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,8 +404,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCCZJUYRT6;
-				INFOPLIST_FILE = "ios-uikit-uiactivityindicatorview-demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "ios-uikit-uiactivityindicatorview-demo/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-uikit-uiactivityindicatorview-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,8 +418,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCCZJUYRT6;
-				INFOPLIST_FILE = "ios-uikit-uiactivityindicatorview-demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "ios-uikit-uiactivityindicatorview-demo/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-uikit-uiactivityindicatorview-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +476,7 @@
 				9668451A1E59D3EA005A6F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9668451B1E59D3EA005A6F2C /* Build configuration list for PBXNativeTarget "ios-uikit-uiactivityindicatorview-demoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +485,7 @@
 				9668451D1E59D3EA005A6F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

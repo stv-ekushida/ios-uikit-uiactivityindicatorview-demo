@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kPz-xN-h11">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="x07-cT-3bO">
+            <objects>
+                <navigationController id="AzK-el-yRU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="a1h-45-6UE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aXs-r1-Hyh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8da-ev-lH0" kind="relationship" relationship="rootViewController" id="c1I-nZ-5fa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGN-7R-vs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="-992"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="FVi-vX-Bvd">
+            <objects>
+                <viewController id="8da-ev-lH0" customClass="SecondViewController" customModule="ios_uikit_uiactivityindicatorview_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PyR-Ib-tGG"/>
+                        <viewControllerLayoutGuide type="bottom" id="JbS-C0-Hzl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d6o-kq-9MJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zpL-tI-dSg">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-14-YBH">
+                                <rect key="frame" x="16" y="576" width="343" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected" title="Show"/>
+                                <connections>
+                                    <action selector="didTapActivityIndicatorButton:" destination="8da-ev-lH0" eventType="touchUpInside" id="zYa-YR-nTT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gHo-14-YBH" firstAttribute="trailing" secondItem="d6o-kq-9MJ" secondAttribute="trailingMargin" id="EKq-Ou-heR"/>
+                            <constraint firstItem="zpL-tI-dSg" firstAttribute="centerY" secondItem="d6o-kq-9MJ" secondAttribute="centerY" id="UOg-qA-vEZ"/>
+                            <constraint firstItem="JbS-C0-Hzl" firstAttribute="top" secondItem="gHo-14-YBH" secondAttribute="bottom" constant="8" id="aJI-4F-9oR"/>
+                            <constraint firstItem="gHo-14-YBH" firstAttribute="leading" secondItem="d6o-kq-9MJ" secondAttribute="leadingMargin" id="l4i-Xd-gmZ"/>
+                            <constraint firstItem="zpL-tI-dSg" firstAttribute="centerX" secondItem="d6o-kq-9MJ" secondAttribute="centerX" id="sXl-13-PmU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="UP1-W6-pZK"/>
+                    <navigationItem key="navigationItem" id="S8Z-NV-rp9">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="fastForward" id="1L3-dn-09C">
+                                <color key="tintColor" red="0.33918789649999997" green="0.99967724079999998" blue="0.92896974539999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="rewind" id="cDG-G5-KQW">
+                                <color key="tintColor" red="0.33918789649999997" green="0.99967724079999998" blue="0.92896974539999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicatorButton" destination="gHo-14-YBH" id="pT0-TU-1Sy"/>
+                        <outlet property="activityIndicatorView" destination="zpL-tI-dSg" id="0rH-Tr-QFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aen-mX-7iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-991"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pab-m5-rg5">
+            <objects>
+                <viewController id="zTu-fm-qh3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pWQ-98-Biv"/>
+                        <viewControllerLayoutGuide type="bottom" id="aO6-3d-FCp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xvN-g0-c4F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="4fo-bK-L0w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-82-IsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="-211"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TEj-SO-ybd">
+            <objects>
+                <tabBarController id="kPz-xN-h11" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ezp-GY-Wae"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="d6r-sB-fTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="AzK-el-yRU" kind="relationship" relationship="viewControllers" id="BsQ-cM-pf3"/>
+                        <segue destination="zTu-fm-qh3" kind="relationship" relationship="viewControllers" id="ASx-BH-0fO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CV4-yD-SgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="-992"/>
+        </scene>
+    </scenes>
+</document>
